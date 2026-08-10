@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         BIRTHDAY MUSIC
+    ========================== -->
+
+    <audio id="birthdayMusic" loop>
+
+        <source src="music/WhatsApp Audio 2026-08-10 at 23.47.25.aac"
+                type="audio/mpeg">
+
+    </audio>
+
+
+
+    <!-- =========================
+         OPENING SCREEN
+    ========================== -->
+
+    <section id="opening">
+
+        <div class="floating">
+            ❤️
+        </div>
+
+        <div class="gift">
+            🎁
+        </div>
+
+        <h1>
+            A Little Surprise For You 💕
+        </h1>
+
+        <p>
+            Someone made this especially for you...
+        </p>
+
+        <button onclick="startWebsite()">
+            Open Your Surprise 💌
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         MAIN WEBSITE
+    ========================== -->
+
+    <section id="mainWebsite"
+             class="hidden">
+
+
+
+        <!-- HERO -->
+
+        <div class="hero">
+
+            <div class="small">
+                ✨ Today is your special day ✨
+            </div>
+
+            <h1>
+                🎂 Happy Birthday
+            </h1>
+
+            <h2>
+                My Special Person ❤️
+            </h2>
+
+            <p>
+                I made this little website
+                just for you. 🥰
+            </p>
+
+            <button onclick="toggleMusic()"
+                    id="musicButton">
+
+                🎵 Play Music
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================
+             BIRTHDAY MESSAGE
+        ========================== -->
+
+        <section class="card">
+
+            <h2>
+                💌 A Message For You
+            </h2>
+
+
+            <p>
+                Happy Birthday to You
+                ishu ❤️
+
+            </p>
+
+
+            <p>
+               आज तिम्रो जन्मदिनमा तिम्रो लागि मनदेखि धेरै कुराहरूको शुभकामना 
+               दिन मन लागेको छ। ❤️
+               जीवनमा जति नै परिवर्तनहरू आऊन्, जति नै कुराहरू बदलिऊन्, म तिमीलाई सधैँ खुसी भएको देख्न चाहन्छु। 
+              तिम्रा आँखामा सधैँ खुसीको चमक देखियोस्, कहिल्यै दुःखको आँसु नआओस्। 🥺❤️
+               तिमीले आफ्नो जीवनमा मनदेखि चाहेका हरेक कुरा बिस्तारै पूरा हुँदै जाऊन्,
+                अनि तिम्रा हरेक सपना वास्तविकतामा परिणत होऊन्। 🥺❤️
+
+
+            </p>
+
+
+            <p>
+                हाम्रो बीचमा जे-जस्तो भयो,ती सबै कुराहरूलाई शब्दमा व्याख्या गर्न सकिँदैन। तर तिमी मेरो जीवनको एउटा महत्वपूर्ण
+                 हिस्सा थियौ,
+                 र तिमीसँग जोडिएका सम्झनाहरू मेरो लागि सधैँ विशेष रहनेछन्
+                  कति कुराहरू भन्न नसके पनि, तिम्रो खुसीको लागि मेरो शुभकामना भने कहिल्यै बदलिने छैन।
+
+            </p>
+
+
+            <p>
+                म साँच्चिकै आशा गर्छु कि तिम्रा आउने दिनहरू शान्त, सुन्दर र सफल रहून्। 
+                तिमी जहाँ जाऊ, जुनसुकै परिस्थितिमा भए पनि आफ्नो मूल्य कहिल्यै नबिर्सनू।
+                 तिमीले पाउन योग्य सबै खुसी, सफलता र राम्रा पलहरू तिम्रो जीवनमा धेरैभन्दा धेरै आऊन्। ❤️
+            </p>
+            <p>
+                सायद जीवनले हामीलाई फरक-फरक दिशातर्फ लैजाला, 
+                तर आजको दिनमा म तिमीलाई विगतका कुनै कुराहरू सम्झाउनुभन्दा पनि
+                 तिम्रो राम्रो भविष्यको लागि शुभकामना दिन चाहन्छु।
+
+            </p>
+             <p>
+                फेरि पनि जन्मदिनको धेरै धेरै शुभकामना, Ishu। 🎂❤️ सधैँ खुसी रहनू, आफ्नो ख्याल राख्नू। तिम्रो जीवनमा सधैँ राम्रा दिनहरू आऊन्, अनि तिमीले चाहेका सबै कुरा पूरा होऊन्। ✨❤️
+             </p>
+
+
+
+            <!-- =========================
+                 SOMETHING I WANT TO SAY
+            ========================== -->
+
+            <div class="something">
+
+                <h2>
+                    💭 Something I Want To Say
+                </h2>
+
+
+                <button onclick="showSorry()">
+
+                    Click Here 💌
+
+                </button>
+
+
+
+                <!-- SORRY MESSAGE -->
+
+                <div id="sorryMessage"
+                     class="hidden">
+                     <div id="sorryEmojiRain"></div>
+
+
+                    <h3>
+                        I’m really sorry. 🥺❤️
+                    </h3>
+
+
+                    <p>
+                     I know I’ve made a lot of mistakes until now, 
+                     and I know you probably think badly of me because of many things.
+                      😔 But I’m not the person you think I am. Some of the things 
+                      I did may have looked wrong, but my intentions were never wrong. 
+                      I never tried to cheat on you, and I never played any
+                       kind of game with you. 🥺
+                    </p>
+
+
+                    <p>
+                       I know I made mistakes and I couldn’t handle many things properly.
+                        For all of that, I’m genuinely sorry. 💔
+                         I don’t know whether you will forgive me or not,
+                          and that’s completely your choice. I won’t force you to forgive me.
+                           But still, if you can, please forgive me. 🙏🏻❤️
+                    </p>
+                    
+                    <p>
+                        You know, I didn’t fall for you just because of your talent or 
+                        the things you could do. 🥺 I liked you after seeing your talent,
+                         but even if one day you have nothing, even if you don’t have that
+                          talent anymore, I would still choose you and still love you for 
+                          who you are. 😔❤️
+
+                        I had never felt this way for anyone before, yrr. 🥹💔
+                         I don’t even know how to explain it properly,
+                          but what I felt for you was genuinely different. 
+                          You became someone really important to me without me
+                           even realizing it. 😔❤️
+
+
+                    </p>
+
+                    <p>
+                        You are really special to me. 🫶🏻
+                         I’ve never loved or cared for anyone the way I have for you.
+                          Maybe I couldn’t show my feelings and love to you in 
+                          the right way, and maybe that’s why you understood me differently. 🥺
+                    </p>
+
+
+                    <p>
+                   It’s okay… I won’t demand anything from you anymore. ❤️
+                    I just want you to be happy in your life, to achieve everything you want, 
+                    and to have a beautiful life ahead. ✨ 
+                    You being happy is enough for me. 🥹❤️
+                    </p>
+
+
+                    <p>
+                        I hope we can leave the
+                        misunderstandings behind
+                        and remember the good
+                        moments we've shared. 🫶
+                    </p>
+
+                    <p>
+                        Once again, I’m truly sorry for everything. 😔❤️
+                        If you can, please forgive me. 🙏🏻🥺❤️
+                    </p>
+
+
+                    <div class="sorry-heart">
+                        🤍
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MEMORIES
+        ========================== -->
+
+        <section class="card">
+
+            <h2>
+                📸 Our Beautiful Memories
+            </h2>
+
+
+            <p class="subtitle">
+                Some moments that I will
+                always remember ❤️
+            </p>
+
+
+            <div class="gallery">
+
+    <div class="memory">
+        <img
+            src="20260515_085450.jpg.jpeg"
+            onclick="openImage(this)"
+            alt="Our Memory">
+
+        <h3>❤️ when we went hinking</h3>
+        <p>15 May 2026</p>
+        <small>One of those moments I'll always remember. 🥰</small>
+    </div>
+
+
+    <div class="memory">
+        <img
+            src="nb.jpeg"
+            onclick="openImage(this)"
+            alt="Our Memory">
+
+        <h3>💕A Beautiful Memory</h3>
+        <p>📅 17 july 2026</p>
+        <small> ❤️</small>
+    </div>
+
+
+    <div class="memory">
+        <img
+            src="Snapchat-978397626.jpg.jpeg"
+            onclick="openImage(this)"
+            alt="Our Memory">
+
+        <h3>✨ One Of My Favorites</h3>
+        <p>📅 10 august 2026</p>
+        <small>A little moment that became a beautiful memory. 🫶</small>
+    </div>
+
+
+    <div class="memory">
+        <img
+            src="Snapchat-2004746948.jpg.jpeg"
+            onclick="openImage(this)"
+            alt="Our Memory">
+
+        <h3>🥰 That Special Day</h3>
+        <p>📅 10 august 2026</p>
+        <small>Some memories are simply impossible to forget. ❤️</small>
+    </div>
+
+
+    <div class="memory">
+        <img
+            src="Snapchat-452635291.jpg.jpeg"
+            onclick="openImage(this)"
+            alt="Our Memory">
+
+        <h3>💖 Another Beautiful Moment</h3>
+        <p>📅 10 august 2026</p>
+        <small>Forever grateful for this little memory. 🤍</small>
+    </div>
+
+</div>
+
+        </section>
+
+
+
+        <!-- =========================
+             LETTER
+        ========================== -->
+
+        <section class="card letter">
+
+            <h2>
+                💖 One Little Letter
+            </h2>
+
+
+            <p>
+                On your birthday, I just want
+                to wish you happiness,
+                success and everything
+                you wish for.
+            </p>
+
+
+            <p>
+                Thank you for being a beautiful
+                part of my memories and for
+                all the little moments that
+                became special.
+            </p>
+
+
+            <p>
+                I hope this little surprise
+                makes you smile today. ❤️
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             FINAL SURPRISE
+        ========================== -->
+
+        <section class="final">
+
+            <h2>
+                🎁 One Last Surprise...
+            </h2>
+
+
+            <button onclick="finalSurprise()">
+
+                Click Here ❤️
+
+            </button>
+
+
+
+            <div id="finalMessage" class="hidden">
+                <div id="loveRain"></div>
+
+    <h1>🎉 HAPPY BIRTHDAY! 🎉</h1>
+
+    <p>
+        May your life always be filled with
+        happiness, love and beautiful memories. ❤️
+    </p>
+
+    <div class="bigHeart">
+        ❤️
+    </div>
+
+    <h2>
+        Have the most amazing birthday! 🎂✨
+    </h2>
+
+    <div class="loveText">
+        I Love You ❤️
+    </div>
+
+    <p class="finalNote">
+        Today, tomorrow and always... 🫶
+    </p>
+
+</div>
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         IMAGE POPUP
+    ========================== -->
+
+    <div id="imagePopup"
+         class="popup"
+         onclick="closeImage()">
+
+
+        <span>
+            ×
+        </span>
+
+
+        <img id="popupImage"
+             alt="Full Size Memory">
+
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
