@@ -1,470 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
 
-    <meta charset="UTF-8">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+body{
+  background:linear-gradient(135deg,#ffd6e7,#fff0f6);
+  color:#4a2635;
+  text-align:center;
+  overflow-x:hidden;
+}
 
-    <title>Happy Birthday ❤️</title>
+section{
+  min-height:100vh;
+  padding:60px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
 
-    <link rel="stylesheet" href="style.css">
+h1{
+  font-size:45px;
+  color:#d6336c;
+  margin-bottom:20px;
+}
 
+h2{
+  color:#d6336c;
+  margin-bottom:20px;
+}
+
+p{
+  max-width:650px;
+  line-height:1.8;
+  font-size:18px;
+}
+
+button{
+  border:none;
+  background:#d6336c;
+  color:white;
+  padding:14px 25px;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:25px;
+  box-shadow:0 5px 15px #d6336c55;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+.heart{
+  font-size:70px;
+  animation:beat 1s infinite;
+}
+
+@keyframes beat{
+  50%{transform:scale(1.15);}
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:900px;
+  width:100%;
+}
+
+.card{
+  background:white;
+  padding:12px;
+  border-radius:18px;
+  box-shadow:0 5px 20px #0002;
+}
+
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:14px;
+}
+
+.card p{
+  font-size:14px;
+  margin-top:10px;
+}
+
+.surprise{
+  background:#fff;
+  border-radius:25px;
+  padding:35px 25px;
+  max-width:700px;
+  box-shadow:0 5px 25px #0002;
+}
+
+#love{
+  margin-top:25px;
+  font-size:35px;
+  color:#d6336c;
+  font-weight:bold;
+}
+
+.falling{
+  position:fixed;
+  top:-50px;
+  font-size:25px;
+  animation:fall 4s linear forwards;
+  pointer-events:none;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+footer{
+  padding:30px;
+  background:#d6336c;
+  color:white;
+}
+</style>
 </head>
-
 
 <body>
 
+<!-- HOME -->
+<section>
+  <div class="heart">❤️</div>
 
-    <!-- =========================
-         BIRTHDAY MUSIC
-    ========================== -->
+  <h1>Happy Birthday 🎂</h1>
 
-    <audio id="birthdayMusic" loop>
+  <p>
+    Today is a very special day because it's your birthday.
+    I hope your day is filled with happiness, love, smiles and beautiful memories.
+  </p>
 
-        <source src="music/WhatsApp Audio 2026-08-10 at 23.47.25.aac"
-                type="audio/mpeg">
+  <button onclick="scrollToSection('message')">
+    Open Your Birthday Surprise 🎁
+  </button>
+</section>
 
-    </audio>
 
+<!-- MESSAGE -->
+<section id="message">
 
+  <h2>A Little Message For You 💌</h2>
 
-    <!-- =========================
-         OPENING SCREEN
-    ========================== -->
-
-    <section id="opening">
-
-        <div class="floating">
-            ❤️
-        </div>
-
-        <div class="gift">
-            🎁
-        </div>
-
-        <h1>
-            A Little Surprise For You 💕
-        </h1>
-
-        <p>
-            Someone made this especially for you...
-        </p>
-
-        <button onclick="startWebsite()">
-            Open Your Surprise 💌
-        </button>
-
-    </section>
-
-
-
-    <!-- =========================
-         MAIN WEBSITE
-    ========================== -->
-
-    <section id="mainWebsite"
-             class="hidden">
-
-
-
-        <!-- HERO -->
-
-        <div class="hero">
-
-            <div class="small">
-                ✨ Today is your special day ✨
-            </div>
-
-            <h1>
-                🎂 Happy Birthday
-            </h1>
-
-            <h2>
-                My Special Person ❤️
-            </h2>
-
-            <p>
-                I made this little website
-                just for you. 🥰
-            </p>
-
-            <button onclick="toggleMusic()"
-                    id="musicButton">
-
-                🎵 Play Music
-
-            </button>
-
-        </div>
-
-
-
-        <!-- =========================
-             BIRTHDAY MESSAGE
-        ========================== -->
-
-        <section class="card">
-
-            <h2>
-                💌 A Message For You
-            </h2>
-
-
-            <p>
-                Happy Birthday to You
-                ishu ❤️
-
-            </p>
-
-
-            <p>
-               आज तिम्रो जन्मदिनमा तिम्रो लागि मनदेखि धेरै कुराहरूको शुभकामना 
-               दिन मन लागेको छ। ❤️
-               जीवनमा जति नै परिवर्तनहरू आऊन्, जति नै कुराहरू बदलिऊन्, म तिमीलाई सधैँ खुसी भएको देख्न चाहन्छु। 
-              तिम्रा आँखामा सधैँ खुसीको चमक देखियोस्, कहिल्यै दुःखको आँसु नआओस्। 🥺❤️
-               तिमीले आफ्नो जीवनमा मनदेखि चाहेका हरेक कुरा बिस्तारै पूरा हुँदै जाऊन्,
-                अनि तिम्रा हरेक सपना वास्तविकतामा परिणत होऊन्। 🥺❤️
-
-
-            </p>
-
-
-            <p>
-                हाम्रो बीचमा जे-जस्तो भयो,ती सबै कुराहरूलाई शब्दमा व्याख्या गर्न सकिँदैन। तर तिमी मेरो जीवनको एउटा महत्वपूर्ण
-                 हिस्सा थियौ,
-                 र तिमीसँग जोडिएका सम्झनाहरू मेरो लागि सधैँ विशेष रहनेछन्
-                  कति कुराहरू भन्न नसके पनि, तिम्रो खुसीको लागि मेरो शुभकामना भने कहिल्यै बदलिने छैन।
-
-            </p>
-
-
-            <p>
-                म साँच्चिकै आशा गर्छु कि तिम्रा आउने दिनहरू शान्त, सुन्दर र सफल रहून्। 
-                तिमी जहाँ जाऊ, जुनसुकै परिस्थितिमा भए पनि आफ्नो मूल्य कहिल्यै नबिर्सनू।
-                 तिमीले पाउन योग्य सबै खुसी, सफलता र राम्रा पलहरू तिम्रो जीवनमा धेरैभन्दा धेरै आऊन्। ❤️
-            </p>
-            <p>
-                सायद जीवनले हामीलाई फरक-फरक दिशातर्फ लैजाला, 
-                तर आजको दिनमा म तिमीलाई विगतका कुनै कुराहरू सम्झाउनुभन्दा पनि
-                 तिम्रो राम्रो भविष्यको लागि शुभकामना दिन चाहन्छु।
-
-            </p>
-             <p>
-                फेरि पनि जन्मदिनको धेरै धेरै शुभकामना, Ishu। 🎂❤️ सधैँ खुसी रहनू, आफ्नो ख्याल राख्नू। तिम्रो जीवनमा सधैँ राम्रा दिनहरू आऊन्, अनि तिमीले चाहेका सबै कुरा पूरा होऊन्। ✨❤️
-             </p>
-
-
-
-            <!-- =========================
-                 SOMETHING I WANT TO SAY
-            ========================== -->
-
-            <div class="something">
-
-                <h2>
-                    💭 Something I Want To Say
-                </h2>
-
-
-                <button onclick="showSorry()">
-
-                    Click Here 💌
-
-                </button>
-
-
-
-                <!-- SORRY MESSAGE -->
-
-                <div id="sorryMessage"
-                     class="hidden">
-                     <div id="sorryEmojiRain"></div>
-
-
-                    <h3>
-                        I’m really sorry. 🥺❤️
-                    </h3>
-
-
-                    <p>
-                     I know I’ve made a lot of mistakes until now, 
-                     and I know you probably think badly of me because of many things.
-                      😔 But I’m not the person you think I am. Some of the things 
-                      I did may have looked wrong, but my intentions were never wrong. 
-                      I never tried to cheat on you, and I never played any
-                       kind of game with you. 🥺
-                    </p>
-
-
-                    <p>
-                       I know I made mistakes and I couldn’t handle many things properly.
-                        For all of that, I’m genuinely sorry. 💔
-                         I don’t know whether you will forgive me or not,
-                          and that’s completely your choice. I won’t force you to forgive me.
-                           But still, if you can, please forgive me. 🙏🏻❤️
-                    </p>
-                    
-                    <p>
-                        You know, I didn’t fall for you just because of your talent or 
-                        the things you could do. 🥺 I liked you after seeing your talent,
-                         but even if one day you have nothing, even if you don’t have that
-                          talent anymore, I would still choose you and still love you for 
-                          who you are. 😔❤️
-
-                        I had never felt this way for anyone before, yrr. 🥹💔
-                         I don’t even know how to explain it properly,
-                          but what I felt for you was genuinely different. 
-                          You became someone really important to me without me
-                           even realizing it. 😔❤️
-
-
-                    </p>
-
-                    <p>
-                        You are really special to me. 🫶🏻
-                         I’ve never loved or cared for anyone the way I have for you.
-                          Maybe I couldn’t show my feelings and love to you in 
-                          the right way, and maybe that’s why you understood me differently. 🥺
-                    </p>
-
-
-                    <p>
-                   It’s okay… I won’t demand anything from you anymore. ❤️
-                    I just want you to be happy in your life, to achieve everything you want, 
-                    and to have a beautiful life ahead. ✨ 
-                    You being happy is enough for me. 🥹❤️
-                    </p>
-
-
-                    <p>
-                        I hope we can leave the
-                        misunderstandings behind
-                        and remember the good
-                        moments we've shared. 🫶
-                    </p>
-
-                    <p>
-                        Once again, I’m truly sorry for everything. 😔❤️
-                        If you can, please forgive me. 🙏🏻🥺❤️
-                    </p>
-
-
-                    <div class="sorry-heart">
-                        🤍
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             MEMORIES
-        ========================== -->
-
-        <section class="card">
-
-            <h2>
-                📸 Our Beautiful Memories
-            </h2>
-
-
-            <p class="subtitle">
-                Some moments that I will
-                always remember ❤️
-            </p>
-
-
-            <div class="gallery">
-
-    <div class="memory">
-        <img
-            src="20260515_085450.jpg.jpeg"
-            onclick="openImage(this)"
-            alt="Our Memory">
-
-        <h3>❤️ when we went hinking</h3>
-        <p>15 May 2026</p>
-        <small>One of those moments I'll always remember. 🥰</small>
-    </div>
-
-
-    <div class="memory">
-        <img
-            src="nb.jpeg"
-            onclick="openImage(this)"
-            alt="Our Memory">
-
-        <h3>💕A Beautiful Memory</h3>
-        <p>📅 17 july 2026</p>
-        <small> ❤️</small>
-    </div>
-
-
-    <div class="memory">
-        <img
-            src="Snapchat-978397626.jpg.jpeg"
-            onclick="openImage(this)"
-            alt="Our Memory">
-
-        <h3>✨ One Of My Favorites</h3>
-        <p>📅 10 august 2026</p>
-        <small>A little moment that became a beautiful memory. 🫶</small>
-    </div>
-
-
-    <div class="memory">
-        <img
-            src="Snapchat-2004746948.jpg.jpeg"
-            onclick="openImage(this)"
-            alt="Our Memory">
-
-        <h3>🥰 That Special Day</h3>
-        <p>📅 10 august 2026</p>
-        <small>Some memories are simply impossible to forget. ❤️</small>
-    </div>
-
-
-    <div class="memory">
-        <img
-            src="Snapchat-452635291.jpg.jpeg"
-            onclick="openImage(this)"
-            alt="Our Memory">
-
-        <h3>💖 Another Beautiful Moment</h3>
-        <p>📅 10 august 2026</p>
-        <small>Forever grateful for this little memory. 🤍</small>
-    </div>
-
-</div>
-
-        </section>
-
-
-
-        <!-- =========================
-             LETTER
-        ========================== -->
-
-        <section class="card letter">
-
-            <h2>
-                💖 One Little Letter
-            </h2>
-
-
-            <p>
-                On your birthday, I just want
-                to wish you happiness,
-                success and everything
-                you wish for.
-            </p>
-
-
-            <p>
-                Thank you for being a beautiful
-                part of my memories and for
-                all the little moments that
-                became special.
-            </p>
-
-
-            <p>
-                I hope this little surprise
-                makes you smile today. ❤️
-            </p>
-
-        </section>
-
-
-
-        <!-- =========================
-             FINAL SURPRISE
-        ========================== -->
-
-        <section class="final">
-
-            <h2>
-                🎁 One Last Surprise...
-            </h2>
-
-
-            <button onclick="finalSurprise()">
-
-                Click Here ❤️
-
-            </button>
-
-
-
-            <div id="finalMessage" class="hidden">
-                <div id="loveRain"></div>
-
-    <h1>🎉 HAPPY BIRTHDAY! 🎉</h1>
+  <div class="surprise">
 
     <p>
-        May your life always be filled with
-        happiness, love and beautiful memories. ❤️
+      Happy Birthday to someone very special to me. ❤️
+      I hope all your dreams come true and you always stay happy.
+      Thank you for being a beautiful part of my life and for all
+      the memories we have shared together.
     </p>
 
-    <div class="bigHeart">
-        ❤️
-    </div>
+    <br>
 
-    <h2>
-        Have the most amazing birthday! 🎂✨
-    </h2>
-
-    <div class="loveText">
-        I Love You ❤️
-    </div>
-
-    <p class="finalNote">
-        Today, tomorrow and always... 🫶
+    <p>
+      No matter how life changes, I will always wish the best for you.
+      May this new year of your life bring you lots of happiness,
+      success and beautiful moments.
     </p>
 
-</div>
+  </div>
 
-        </section>
+  <button onclick="scrollToSection('gallery')">
+    See Our Memories 📸
+  </button>
 
-
-    </section>
-
-
-
-    <!-- =========================
-         IMAGE POPUP
-    ========================== -->
-
-    <div id="imagePopup"
-         class="popup"
-         onclick="closeImage()">
+</section>
 
 
-        <span>
-            ×
-        </span>
+<!-- GALLERY -->
+<section id="gallery">
 
+  <h2>Our Memories 📸❤️</h2>
 
-        <img id="popupImage"
-             alt="Full Size Memory">
+  <div class="gallery">
 
-
+    <div class="card">
+      <img src="20260515_085450.jpg.jpeg">
+      <p>One of those beautiful memories ❤️</p>
     </div>
 
+    <div class="card">
+      <img src="20260515_085457.jpg.jpeg">
+      <p>A moment I will always remember 💕</p>
+    </div>
+
+    <div class="card">
+      <img src="Snapshot-2004746948.jpg.jpeg">
+      <p>Beautiful memories together 🌸</p>
+    </div>
+
+    <div class="card">
+      <img src="Snapshot-452635291.jpg.jpeg">
+      <p>Another special moment ❤️</p>
+    </div>
+
+    <div class="card">
+      <img src="Snapshot-978397626.jpg.jpeg">
+      <p>Memories that make me smile 😊</p>
+    </div>
+
+  </div>
+
+  <button onclick="scrollToSection('surprise')">
+    One Last Surprise 🎁
+  </button>
+
+</section>
 
 
-    <!-- JAVASCRIPT -->
+<!-- LAST SURPRISE -->
+<section id="surprise">
 
-    <script src="script.js"></script>
+  <div class="surprise">
 
+    <h2>One Last Surprise 💗</h2>
+
+    <p>
+      I just want you to know one thing...
+    </p>
+
+    <button onclick="showLove()">
+      Click Here ❤️
+    </button>
+
+    <div id="love"></div>
+
+  </div>
+
+</section>
+
+
+<footer>
+  Made with ❤️ just for you
+</footer>
+
+
+<script>
+
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+function showLove(){
+
+  document.getElementById("love").innerHTML =
+    "I LOVE YOU ❤️";
+
+  for(let i=0;i<35;i++){
+
+    setTimeout(function(){
+
+      const heart=document.createElement("div");
+
+      heart.className="falling";
+      heart.innerHTML=["❤️","💗","💕","💖","🎉","✨"]
+        [Math.floor(Math.random()*6)];
+
+      heart.style.left=Math.random()*100+"vw";
+      heart.style.animationDuration=(3+Math.random()*3)+"s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(()=>{
+        heart.remove();
+      },6000);
+
+    },i*100);
+
+  }
+}
+
+</script>
 
 </body>
-
 </html>
